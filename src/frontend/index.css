@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url('/assets/fonts/Figtree[wght].woff2') format('woff2-variations');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('/assets/fonts/BricolageGrotesque[opsz,wdth,wght].woff2') format('woff2-variations');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/assets/fonts/JetBrainsMono[wght].woff2') format('woff2-variations');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark navy background, Roblox-style */
+    --background: 0.14 0.02 245;
+    --foreground: 0.96 0.005 245;
+    --card: 0.18 0.025 245;
+    --card-foreground: 0.96 0.005 245;
+    --popover: 0.18 0.025 245;
+    --popover-foreground: 0.96 0.005 245;
+    /* Bright Roblox blue: #00a2ff ≈ oklch(0.65 0.21 212) */
+    --primary: 0.65 0.21 212;
+    --primary-foreground: 0.10 0.01 245;
+    --secondary: 0.22 0.03 245;
+    --secondary-foreground: 0.85 0.01 245;
+    --muted: 0.21 0.025 245;
+    --muted-foreground: 0.55 0.03 245;
+    --accent: 0.65 0.21 212;
+    --accent-foreground: 0.10 0.01 245;
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 0.99 0 0;
+    --border: 0.26 0.03 245;
+    --input: 0.22 0.03 245;
+    --ring: 0.65 0.21 212;
+    --radius: 0.625rem;
+    --chart-1: 0.65 0.21 212;
+    --chart-2: 0.65 0.18 140;
+    --chart-3: 0.75 0.20 85;
+    --chart-4: 0.60 0.22 27;
+    --chart-5: 0.65 0.18 300;
+    --sidebar: 0.12 0.02 245;
+    --sidebar-foreground: 0.96 0.005 245;
+    --sidebar-primary: 0.65 0.21 212;
+    --sidebar-primary-foreground: 0.10 0.01 245;
+    --sidebar-accent: 0.22 0.03 245;
+    --sidebar-accent-foreground: 0.85 0.01 245;
+    --sidebar-border: 0.26 0.03 245;
+    --sidebar-ring: 0.65 0.21 212;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Figtree', 'system-ui', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.14 0.02 245);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.30 0.04 245);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.65 0.21 212);
+}
